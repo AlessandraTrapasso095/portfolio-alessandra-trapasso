@@ -1547,11 +1547,36 @@ main {
   .hero-photo-wrap {
     margin: 0 auto;        
   }
-}
 
-@media (max-width: 500px) {
   .hero-content { margin-top: 0 !important; padding-bottom: 16px !important; }
   .why-me { padding-top: 24px !important; }
+
+  .page-chisono .chisono-hero {
+    padding: 18px 12px 18px !important;
+  }
+
+  .page-chisono .chisono-hero__inner {
+    margin-top: 0 !important;
+    gap: 16px !important;
+  }
+
+  .page-chisono .hero-photo-wrap {
+    margin-top: 0 !important;
+    max-width: 420px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* se il "why me" è subito dopo e sembra lontano */
+  .page-chisono .why-me {
+    padding-top: 24px !important;
+  }
+
+  /* hamburger sempre sopra (se i pulsanti nel drawer sembrano "staccati") */
+  .nav-hamburger {
+    top: 12px !important;
+    right: 12px !important;
+  }
 }
 
 /* ---- FIX iOS Safari (hamburger che sparisce) ---- */
@@ -1584,5 +1609,10 @@ main {
 @media (max-width: 390px) {
   .menu-bar { display: none !important; }
   .social-links { display: none !important; margin: 0 !important; }
+}
+
+/* Alternativa: tieni la X sull’hamburger e togli la X nel drawer */
+#nav-toggle:checked ~ .nav-drawer .nav-drawer__close {
+  display: none !important;
 }
 
