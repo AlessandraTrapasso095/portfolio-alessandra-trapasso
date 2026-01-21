@@ -1522,9 +1522,43 @@ main {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
+
+  /* 1) Riduci il logo così non mangia tutta la riga */
+  .brand__logo {
+    width: 100px; /* puoi scendere anche a 150 se serve */
+  }
+
+  /* 2) Evita che i social “spingano” l’hamburger fuori schermo */
   .social-links {
-    margin-right: 0; 
+    margin-right: 0;      /* toglie il push */
+    margin-left: 8px;
+  }
+
+  /* 3) Se lo spazio è poco, la soluzione più pulita è nascondere i social in top bar */
+  .social-links {
+    display: none;
+  }
+
+  /* 4) Assicura che l’hamburger stia sempre a destra */
+  .nav-hamburger {
+    display: flex;      /* ribadisco */
+    margin-left: auto;  /* lo inchioda a destra */
+  }
+
+  /* 5) Evita che la nav faccia overflow orizzontale */
+  .hero-nav {
+    padding-left: 12px;
+    padding-right: 12px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-nav .brand__logo {
+    width: 170px !important;
+    height: auto !important;
+    max-width: 100% !important;
   }
 }
 
