@@ -403,6 +403,7 @@ main {
   width: 46px;
   height: 46px;
   border-radius: 12px;
+  z-index: 10001;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -1419,5 +1420,46 @@ main {
   }
   .process-card__num {
     font-size: 54px;
+  }
+}
+@media (max-width: 500px) {
+  .menu-bar {
+    display: none !important;
+  }
+  .social-links {
+    margin-right: 120px !important;
+    margin-bottom: 20px;
+  }
+  .hero-nav {
+    padding: 12px 12px !important;
+  }
+  .brand__logo {
+    width: 160px !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+  .nav-hamburger {
+    display: flex !important;
+    position: fixed !important;
+    top: 12px !important;
+    right: 12px !important;
+    z-index: 999999 !important;
+  }
+  .hero-row > .col-12.col-lg-5 {
+    justify-content: center !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .hero-photo-wrap {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 390px) {
+  .menu-bar {
+    display: none !important;
+  }
+  .social-links {
+    display: none !important;
+    margin: 0 !important;
   }
 }/*# sourceMappingURL=style.css.map */
